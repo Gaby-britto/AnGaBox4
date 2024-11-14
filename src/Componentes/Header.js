@@ -1,0 +1,46 @@
+import React from 'react'
+import { Image, StyleSheet, Text, View } from 'react-native'
+import { Ionicons } from '@expo/vector-icons';
+
+
+const imgUser = 'https://i.pinimg.com/564x/13/12/d2/1312d287e7de2dde6a6ccb8f4e3ddcd3.jpg'
+
+export default function Header() {
+  return (
+    <View style={styles.container}>
+        <Image
+         style={styles.imageUser}
+         source={require('../Assets/Images/logoImage.png')}
+        />
+        <Text style={styles.nameUser}>@GabyBea</Text>
+        <Ionicons name="notifications-outline" size={30} color="#000" style={styles.iconNotification}/>
+
+    </View>
+  )
+}
+
+const styles = StyleSheet.create({
+    container: {
+        marginTop: 50,
+        justifyContent: "flex-start",
+        flexDirection: "row",
+    },
+    imageUser: {
+        width: 50,
+        height: 50,
+        borderRadius: 50/2,
+        marginLeft: 18
+    },
+    nameUser: {
+        marginTop: 15,
+        marginLeft: 10,
+        fontSize: 16,
+        fontFamily: 'Montserrat_700Bold',
+        color: '#9400D3'
+    },
+    iconNotification:{
+        color: '#9400D3',
+        marginLeft:190,
+        marginTop:10
+    }
+});
