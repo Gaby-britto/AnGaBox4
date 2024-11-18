@@ -1,8 +1,8 @@
 import React from 'react';
-import { StyleSheet, Text, View, TextInput, TouchableOpacity, Image, ScrollView } from 'react-native';
+import { StyleSheet, Text, View, TextInput, TouchableOpacity, Image} from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import { useFonts, Montserrat_400Regular, Montserrat_700Bold } from '@expo-google-fonts/montserrat';
-import Footer from '../Componentes/Footer';
+import Footer from '../../Componentes/Footer/Footer';
 
 export default function User() {
   const [fontsLoaded] = useFonts({
@@ -16,16 +16,10 @@ export default function User() {
 
   return (
     <View style={styles.container}>
-      <ScrollView contentContainerStyle={styles.scrollContent}>
         <View style={styles.containerText}>
           <Text style={styles.hello}>Hello,</Text>
           <Text style={styles.username}> Ana Gaby</Text>
         </View>
-
-        <Image
-          style={styles.image}
-          source={require('../Assets/Images/camera.jpg')}
-        />
 
         <View style={styles.containerInfo}>
           <Text style={styles.info}>Your Information</Text>
@@ -64,7 +58,11 @@ export default function User() {
             <Ionicons name="pencil" size={20} color="black" />
           </TouchableOpacity>
         </View>
-      </ScrollView>
+      
+      <Image
+          style={styles.imageFooter}
+          source={require('../../Assets/Images/footer.png')}
+        />
       <Footer />
     </View>
   );
@@ -72,6 +70,7 @@ export default function User() {
 
 const styles = StyleSheet.create({
   container: {
+    alignItems: 'center',
     flex: 1,
     backgroundColor: "white",
   },
@@ -90,9 +89,9 @@ const styles = StyleSheet.create({
     fontFamily: 'Montserrat_400Regular',
   },
   image: {
-    marginTop: 100,
-    width: 150,
-    height: 150,
+    marginTop: 50,
+    width: 100,
+    height: 100,
     borderRadius: 75,
   },
   info: {
@@ -103,12 +102,13 @@ const styles = StyleSheet.create({
     borderBottomWidth: 1,
     borderBottomColor: '#9400D3',
     marginBottom: 20,
-    marginTop: 150
+    marginTop: 100
   },
   containerText: {
     justifyContent: "flex-start",
     flexDirection: "row",
     padding: 20,
+    marginTop: 150
   },
   field: {
     flexDirection: 'row',
@@ -127,8 +127,13 @@ const styles = StyleSheet.create({
     marginLeft: 10,
   },
   containerInfo: {
-    marginTop: 20,
+    marginTop: 0,
     alignSelf: 'flex-start',
     marginLeft: 25,
   },
+  imageFooter:{
+    marginTop: 100,
+    width: 500,
+    height: 200
+  }
 });

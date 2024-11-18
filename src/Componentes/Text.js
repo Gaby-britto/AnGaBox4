@@ -20,7 +20,7 @@ export default function Texts({ title = "Recommended for You" , subTitle = "See 
 
 const styles = StyleSheet.create({
   container: {
-    marginTop: 50,
+    marginTop: 15,
     justifyContent: "flex-start",
     flexDirection: "row",
     alignItems: "center", 

@@ -18,7 +18,7 @@ export default function Search() {
 
 const styles = StyleSheet.create({
   container: {
-    width: 370,
+    width: 385,
     height: 55,
     marginLeft: 25/2, 
     marginTop: 20,

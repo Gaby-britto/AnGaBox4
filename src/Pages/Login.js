@@ -29,7 +29,7 @@ export default function Login() {
     //     password: password,
     //   });
     //   Alert.alert("Sucesso", "Usuário registrado com sucesso!");
-    navigation.navigate("Search");
+    navigation.navigate("Home");
     //   console.log("Resposta do servidor:", response.data);
     // } catch (error) {
     //   console.log("Erro na requisição:", error.message);
